@@ -20,17 +20,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 321 654 876",
+    description: "(647) 410 6315",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "Balgurnoor8@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "Toronto, ON",
   },
 ];
 

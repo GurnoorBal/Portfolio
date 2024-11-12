@@ -7,47 +7,51 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaJava,
+  FaDatabase,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiDjango,
+  SiMysql,
+  SiFirebase,
+  // SiAzure,
+  SiLinux,
+  SiFlutter,
+  SiGit,
+  SiPytorch,
+} from "react-icons/si";
+
+
 
 // about data
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I'm a Software Engineering student with a passion for creating impactful solutions in full-stack development, cloud, and machine learning. I thrive on leading projects from concept to completion, optimizing user experiences, and refining backend systems. When I'm not coding, you’ll find me staying active through sports, running, and building community with a student-run club.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "Gurnoor Bal",
     },
     {
       fieldName: "Experience",
-      fieldValue: "12+ Years",
-    },
-    {
-      fieldName: "Skype",
-      fieldValue: "luke.01",
+      fieldValue: "1 Year",
     },
     {
       fieldName: "Nationality",
-      fieldValue: "American",
+      fieldValue: "Canadian",
     },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
+      fieldValue: "balgurnoor8@gmail.com",
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "English, Punjabi, Hindi, Urdu",
     },
   ],
 };
@@ -57,37 +61,12 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My professional experience includes a full-stack software engineering role at Korotu Technology Inc., where I contributed to environmental data solutions by implementing machine learning models, developing optimized user interfaces, and managing cloud resources. I led collaborative team efforts, streamlined project workflows, and enhanced backend functionality for impactful data insights.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
-    },
-    {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
-    },
-    {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
-    },
-    {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
-    },
-    {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      company: "Korotu Technology Inc.",
+      position: "Software Engineer - Full Stack Developer",
+      duration: "05/2023 - 04/2024",
     },
   ],
 };
@@ -97,37 +76,22 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My educational journey at McMaster University in Software Engineering has provided a strong foundation in programming, software design, and machine learning. Supplementary courses, such as the Microsoft Azure Fundamentals and an introduction to Diffusion Models, add to my knowledge base, equipping me to deliver effective and efficient technical solutions.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
+      institution: "Udemy",
+      degree: "AZ-900: Microsoft Azure Fundamentals",
       duration: "2023",
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      institution: "Udemy",
+      degree: "Introduction to Diffusion Models",
+      duration: "2024",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
+      institution: "McMaster University",
+      degree: "Bachelors Degree in Software Engineering",
+      duration: "2020 - 2025",
     },
   ],
 };
@@ -136,40 +100,27 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My skill set covers a diverse range of programming languages, frameworks, and tools, including Python, JavaScript, React, and cloud platforms like Azure. Proficient in both front-end and back-end development, I bring a holistic approach to building scalable and user-friendly applications.",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
+    { icon: <FaHtml5 />, name: "html 5" },
+    { icon: <FaCss3 />, name: "css 3" },
+    { icon: <FaJs />, name: "javascript" },
+    { icon: <FaReact />, name: "react.js" },
+    { icon: <SiNextdotjs />, name: "next.js" },
+    { icon: <SiTailwindcss />, name: "tailwind.css" },
+    { icon: <FaNodeJs />, name: "node.js" },
+    { icon: <FaPython />, name: "python" },
+    { icon: <FaJava />, name: "java" },
+    { icon: <SiDjango />, name: "django" },
+    { icon: <FaDatabase />, name: "sql" },
+    { icon: <SiMysql />, name: "mysql" },
+    { icon: <SiFirebase />, name: "firebase" },
+    // { icon: <SiAzure />, name: "azure" },
+    { icon: <SiLinux />, name: "linux" },
+    { icon: <FaFigma />, name: "figma" },
+    { icon: <SiFlutter />, name: "flutter" },
+    { icon: <SiGit />, name: "git" },
+    { icon: <SiPytorch />, name: "pytorch" },
   ],
 };
 
@@ -315,7 +266,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li

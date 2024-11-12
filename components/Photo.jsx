@@ -23,7 +23,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/IMG_6237 (1).png"
             priority
             quality={100}
             fill
@@ -40,11 +40,11 @@ const Photo = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
-            cx="253"
-            cy="253"
-            r="250"
+            cx="245"
+            cy="260"
+            r="260"
             stroke="#00ff99"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
