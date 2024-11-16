@@ -24,10 +24,22 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#1c1c22",
+        primary: {
+          light: "#ffffff", // Light mode primary
+          DEFAULT: "#1c1c22", // Default for dark mode
+        },
         accent: {
-          DEFAULT: "#00ff99",
-          hover: "#00e187",
+          light: "#5c6bc0", // Light mode accent
+          DEFAULT: "#5c6bc0", // Dark mode accent
+          hover: "#4e5cb0", // Adjust hover for dark mode
+        },
+        background: {
+          light: "#f9f9f9", // Background for light mode
+          dark: "#121212", // Background for dark mode
+        },
+        text: {
+          light: "#000000", // Light mode text color
+          dark: "#ffffff", // Dark mode text color
         },
       },
 
