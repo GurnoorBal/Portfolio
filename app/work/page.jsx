@@ -2,9 +2,14 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { useEffect } from "react";
 
+
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation"; 
+import "swiper/css/pagination"; 
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
@@ -22,41 +27,59 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Chest X-Ray Disease Classification",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+      "A deep learning project that leverages a Convolutional Neural Network (CNN) to analyze chest X-ray images and detect lung and cardiac conditions. Designed to assist in automated medical diagnosis, this model enhances accuracy and efficiency in radiology.",
+    stack: [{ name: "PyTorch" }, { name: "React.js" }, { name: "Javascript" }],
+    images: [
+      "/assets/work/image13.png",
+      "/assets/work/image14.png",
+      "/assets/work/image15.png",
+      "/assets/work/image16.png",
+      "/assets/work/image17.png",
+    ],
     live: "",
-    github: "",
+    github: "https://github.com/harrisonchiu/xray/tree/main",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "TripTogether",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+      "TripTogether is a rapidly built carpooling application designed in just two days. It enables users of a fictional taxi service to offer rides, scan QR codes to join carpools, and split fares dynamically as more passengers join.",
+    stack: [{ name: "Flutter(Dart)" }, { name: "Firebase" }, { name: "Google Maps API" }],
+    images: [
+      "/assets/work/Image2.png",
+      "/assets/work/Image3.png",
+      "/assets/work/Image4.png",
+      "/assets/work/Image5.png",
+      "/assets/work/Image6.png",
+      "/assets/work/Image7.png",
+    ],
     live: "",
     github: "",
   },
   {
     num: "03",
-    category: "frontend",
+    category: "TouchdownTalent",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
+      "TouchdownTalent is a web application that provides NFL player stats, team standings, and trending news. Built with a custom API and dynamic UI, it allows users to explore player data and team performance in an intuitive way.",
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }, { name: "Express.js" },],
+    images: [
+      "/assets/work/Image8.png",
+      "/assets/work/Image9.png",
+      "/assets/work/Image10.png",
+      "/assets/work/Image11.png",
+    ],
     live: "",
     github: "",
   },
 ];
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(projects[0] );
 
   const handleSlideChange = (swiper) => {
     // get current slide index
@@ -64,7 +87,18 @@ const Work = () => {
     // update project state based on current slide index
     setProject(projects[currentIndex]);
   };
-
+useEffect(() => {
+  setTimeout(() => {
+    const swiper = document.querySelector(".mySwiper")?.swiper;
+    if (swiper) {
+      swiper.params.navigation.prevEl = ".custom-prev";
+      swiper.params.navigation.nextEl = ".custom-next";
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, 500); // Slight delay to ensure elements exist
+}, []);
+  
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -105,7 +139,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                {/* <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -116,9 +150,9 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
                 {/* github project button */}
-                <Link href={project.github}>
+                {/* <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -129,37 +163,59 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
+          {/* Outer Swiper - Controls Projects */}
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      {/* image */}
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-              {/* slider buttons */}
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <div className="relative flex justify-center items-center w-full h-auto min-h-[500px]">
+
+
+                  {/* Inner Swiper - Controls Images */}
+                    <Swiper
+                      spaceBetween={10}
+                      slidesPerView={1}
+                      navigation={{
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                      }}
+                      pagination={{ clickable: true }}
+                      modules={[Navigation]}
+                      className="w-full"
+                    >
+                      {project.images.map((img, imgIndex) => (
+                        <SwiperSlide key={imgIndex}>
+                          <div className="relative flex justify-center items-center w-full h-[500px]">
+                            <Image 
+                              src={img} 
+                              width={800} 
+                              height={400} 
+                              className="rounded-lg w-full h-full object-contain"
+                              alt={`Project image ${imgIndex + 1}`} 
+                            />
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                       {/* Custom Navigation Buttons */}
+                      <button className="custom-prev absolute left-1 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 p-3 rounded-full">
+                        ◀
+                      </button>
+                      <button className="custom-next absolute right-1 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/50 p-3 rounded-full">
+                        ▶
+                      </button>
+                    </Swiper>
+                  </div>
+                </SwiperSlide>
+              ))}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
