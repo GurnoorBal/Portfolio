@@ -23,7 +23,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/IMG_6237 (1).png"
+            src="/assets/Iron ring.png"
             priority
             quality={100}
             fill
@@ -42,7 +42,7 @@ const Photo = () => {
           <motion.circle
             cx="245"
             cy="260"
-            r="260"
+            r="150"
             stroke="#5c6bc0"
             strokeWidth="5"
             strokeLinecap="round"

@@ -40,7 +40,7 @@ const projects = [
       "/assets/work/Image17.png",
     ],
     live: "",
-    github: "https://github.com/harrisonchiu/xray/tree/main",
+    github: "https://github.com/GurnoorBal/Chestscan-Ai",
   },
   {
     num: "02",

@@ -13,16 +13,16 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Software Engineer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br /> <span className="text-accent">Gurnoor Bal</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-            Software Engineering student fueled by a love for tech, travel, vlogging, and creative projects. I’m all about building smart solutions, exploring new places, and capturing moments along the way.
+            Software Engineer focused on backend systems, data pipelines, and cloud infrastructure. Experience building APIs, production services, and end-to-end technical platforms.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/assets/resume/Resume(Oct 2024).pdf" download>
+              <a href="/assets/resume/GurnoorBal_CV.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"

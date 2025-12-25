@@ -31,7 +31,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "I'm a Software Engineering student with a passion for creating impactful solutions in full-stack development, cloud, and machine learning. I thrive on leading projects from concept to completion, optimizing user experiences, and refining backend systems. When I'm not coding, you’ll find me staying active through sports, running, and building community with a student-run club.",
+    "I’m a Software Engineer focused on building backend systems, data pipelines, and cloud-hosted services. I have experience delivering end-to-end platforms, designing APIs, and supporting production systems across data and infrastructure layers.",
   info: [
     {
       fieldName: "Name",
